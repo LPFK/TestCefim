@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    BewDev - Input
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="mt-4">Input</h1>
+      {{ form_start(form) }}
+      <div class="form-control">
+      <i class="fa fa-calendar"></i> {{ form_label(form.Nom) }}
+      {{ form_widget(form.Nom) }}
+
+      <small>{{ form_help(form.Nom) }}</small>
+
+      <div class="form-error">
+          {{ form_errors(form.Nom) }}
+      </div>
+      {{ form_end(form) }}
+</div>
+    </div>
+{% endblock %}
